@@ -228,6 +228,19 @@ from nacl.bindings.crypto_sign import (
     crypto_sign_keypair,
     crypto_sign_open,
     crypto_sign_seed_keypair,
+    crypto_sign_detached,
+    crypto_sign_verify_detached,
+)
+from nacl.bindings.crypto_stream import (
+    crypto_stream_chacha20_KEYBYTES,
+    crypto_stream_chacha20_NONCEBYTES,
+    crypto_stream_chacha20_MESSAGEBYTES_MAX,
+    crypto_stream_chacha20_ietf_KEYBYTES,
+    crypto_stream_chacha20_ietf_NONCEBYTES,
+    crypto_stream_chacha20_ietf_MESSAGEBYTES,
+    crypto_stream_chacha20_keygen,
+    crypto_stream_chacha20_xor,
+    crypto_stream_chacha20_xor_ic
 )
 from nacl.bindings.randombytes import (
     randombytes,
@@ -383,6 +396,15 @@ __all__ = [
     "crypto_sign_ed25519ph_final_verify",
     "crypto_sign_ed25519ph_state",
     "crypto_sign_ed25519ph_update",
+    "crypto_stream_chacha20_KEYBYTES",
+    "crypto_stream_chacha20_NONCEBYTES",
+    "crypto_stream_chacha20_MESSAGEBYTES_MAX",
+    "crypto_stream_chacha20_ietf_KEYBYTES",
+    "crypto_stream_chacha20_ietf_NONCEBYTES",
+    "crypto_stream_chacha20_ietf_MESSAGEBYTES",
+    "crypto_stream_chacha20_keygen",
+    "crypto_stream_chacha20_xor",
+    "crypto_stream_chacha20_xor_ic",
     "crypto_pwhash_ALG_ARGON2I13",
     "crypto_pwhash_ALG_ARGON2ID13",
     "crypto_pwhash_ALG_DEFAULT",

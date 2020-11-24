@@ -37,3 +37,13 @@ Features
 ------------
 
 .. _Changelog: https://pynacl.readthedocs.io/en/stable/changelog/
+
+Installation
+--------------------
+
+OSX installation:
+
+.. code-block:: console
+
+    $ venv
+    $ python setup.py setup.py bdist_wheel
