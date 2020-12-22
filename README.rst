@@ -46,4 +46,4 @@ OSX installation:
 .. code-block:: console
 
     $ venv
-    $ python setup.py setup.py bdist_wheel
+    $ python setup.py bdist_wheel
