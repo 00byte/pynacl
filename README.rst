@@ -36,7 +36,7 @@ This process must be done with a Windows.
 
 **Step 2**: Download the latest Libsodium MSVC from the following URL: `https://download.libsodium.org/libsodium/releases/`. At the time of writing it is the file `libsodium-1.0.18-msvc.zip`.
 
-**Step 3**: Extract the downloaded file and place it in a location you won't delete. In our case is at C:\libsodium, where we have the following directories (may vary, depends on the version):
+**Step 3**: Extract the downloaded file and place it in a location you won't delete. In our case is at C:\\libsodium, where we have the following directories (may vary, depends on the version):
 
 - C:\libsodium\include
 - C:\libsodium\Win32
@@ -50,7 +50,7 @@ This process must be done with a Windows.
 
 Ensure it is installed. Open a new CMD and type `where make` or `make` to ensure it is found.
 
-**Step 5**: Select the Windows release for compilation. They can be found at `C:\libsodium\x64\Release` (depends on where you installed the libsodium). Each `VXXX` folder, for example `V140`, represents a Windows version. For example, V120 is Windows7 and V14X is Windows 10. To go safe, choose the one with the highest number (at the time of writing is `C:\libsodium\x64\Release\v142`). From now on, we will reference this directory as WINDOWS_RELEASE.
+**Step 5**: Select the Windows release for compilation. They can be found at `C:\\libsodium\\x64\\Release` (depends on where you installed the libsodium). Each `VXXX` folder, for example `V140`, represents a Windows version. For example, V120 is Windows7 and V14X is Windows 10. To go safe, choose the one with the highest number (at the time of writing is `C:\\libsodium\\x64\\Release\\v142`). From now on, we will reference this directory as WINDOWS_RELEASE.
 
 **Step 6**: Compile the binary (change `WINDOWS_RELEASE` for the path selected in the previous step):
 
@@ -68,7 +68,7 @@ Now, you should see a **dist** folder that contains a file like the following on
 **Step 7**: The wheel file that has been created in the **dist** directory must be unpacked to add a file. Open the terminal with the virtual environment and:
 
 1. wheel unpack dist/PyNaCl-1.5.0.dev1-cp38-cp38-win_amd64.whl
-2. Inside the unpacked wheel directory, go to the `nacl` directory and ensure the file libsodium.lib exists. If not, copy it from `C:\libsodium\x64\Release\WINDOWS_RELEASE\static`, for example `C:\libsodium\x64\Release\v142\static`.
+2. Inside the unpacked wheel directory, go to the `nacl` directory and ensure the file libsodium.lib exists. If not, copy it from `C:\\libsodium\\x64\\Release\\WINDOWS_RELEASE\\static`, for example `C:\\libsodium\\x64\\Release\\v142\\static`.
 3. wheel pack PyNaCl-1.5.0.dev1
 4. Replace the wheel in dist/ with the new one.
 
