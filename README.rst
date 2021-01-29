@@ -68,7 +68,7 @@ Now, you should see a **dist** folder that contains a file like the following on
 **Step 7**: The wheel file that has been created in the **dist** directory must be unpacked to add a file. Open the terminal with the virtual environment and:
 
 1. wheel unpack dist/PyNaCl-1.5.0.dev1-cp38-cp38-win_amd64.whl
-2. Inside the unpacked wheel directory, go to the `nacl` directory and ensure the file libsodium.lib exists. If not, copy it from `C:\\libsodium\\x64\\Release\\WINDOWS_RELEASE\\static`, for example `C:\\libsodium\\x64\\Release\\v142\\static`.
+2. Inside the unpacked wheel directory, go to the `nacl` directory and ensure the file libsoidum.dll and libsodium.lib exists. If not, copy all the files from `C:\\libsodium\\x64\\Release\\WINDOWS_RELEASE\\dynamic`, for example `C:\\libsodium\\x64\\Release\\v142\\dynamic`.
 3. wheel pack PyNaCl-1.5.0.dev1
 4. Replace the wheel in dist/ with the new one.
 
@@ -77,4 +77,4 @@ Now, you should see a **dist** folder that contains a file like the following on
 1. Download the dependency analyzer from: https://github.com/lucasg/Dependencies
 2. Open the dependency analyzer as GUI
 3. Load the _sodium.pyd file from the installed wheel. In our case is at `venv/Lib/site-packages/nacl/_sodium.pyd`
-4. Ensure all the dependencies are right. If libsodium.lib is missing, go back to step 7.
+4. Ensure all the dependencies are right. If libsodium.lib or libsodium.dll is missing, go back to step 7.
